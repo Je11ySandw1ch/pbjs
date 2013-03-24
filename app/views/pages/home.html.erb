@@ -1,0 +1,16 @@
+<% if user_signed_in? %>
+	<h1>Hola! You are logged in!</h1>
+<% else %>
+	<div class="hero-unit">
+		<h1>You're invited!</h1>
+		<p>
+			This is the website for Patricia & Jonathan's wedding.
+		</p>
+		<p>
+			<%= link_to "Register!", new_user_registration_path, class: "btn btn-info btn-large" %>
+		</p>
+		<p>
+			If you've already registered, please login <%= link_to "here", "#" %>.
+		</p>
+	</div>
+<% end %>
